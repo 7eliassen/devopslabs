@@ -1,0 +1,7 @@
+Dockerfile
+secret_key
+.git
+.gitignore
+README.md
+.DS_Store
+docker-compose.yml
