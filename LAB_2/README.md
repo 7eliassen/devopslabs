@@ -346,7 +346,22 @@ spec:
 docker build -t password-frontend:1.5 .
 ```
 
-Изменим значение `frontend.tag` на 1.5
+Изменим значение `frontend.tag` на 1.5 в values.yaml
+
+```yaml
+ingress:
+  host: passgen.local
+
+api:
+  image: password-backend
+  tag: "1.0"
+  port: 8000
+
+frontend:
+  image: password-frontend
+  tag: "1.5" # 1.4 -> 1.5
+  port: 80
+```
 
 и выполним 
 
