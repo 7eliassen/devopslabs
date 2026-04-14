@@ -1,0 +1,12 @@
+ingress:
+  host: passgen.local
+
+api:
+  image: password-backend
+  tag: "1.0"
+  port: 8000
+
+frontend:
+  image: password-frontend
+  tag: "1.5"
+  port: 80

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: passgen-front-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: passgen-front
+  template:
+    metadata:
+      labels:
+        app: passgen-front
+    spec:
+      containers:
+        - name: password-frontend
+          image: password-frontend:1.4
+          ports:
+            - containerPort: 80

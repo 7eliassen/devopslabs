@@ -1,0 +1,4 @@
+apiVersion: v2
+name: passgen-chart
+version: 0.1.0
+description: password generator helm chart

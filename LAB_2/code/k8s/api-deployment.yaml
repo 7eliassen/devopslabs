@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: passgen-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: passgen-api
+  template:
+    metadata:
+      labels:
+        app: passgen-api
+    spec:
+      containers:
+        - name: password-backend
+          image: password-backend:1.0
+          ports:
+            - containerPort: 8000
